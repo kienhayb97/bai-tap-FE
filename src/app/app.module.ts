@@ -7,7 +7,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import { LoginUserComponent } from './baitap-FE/user/login-user/login-user.component';
-import { HomeComponent } from './baitap-FE/component/home/home.component';
+import { ConChoComponent } from './baitap-FE/component/con-cho/con-cho.component';
+import {CookieService} from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { HomeComponent } from './baitap-FE/component/home/home.component';
     AppComponent,
     CreateUserComponent,
     LoginUserComponent,
-    HomeComponent,
+    ConChoComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +26,7 @@ import { HomeComponent } from './baitap-FE/component/home/home.component';
     RouterModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
